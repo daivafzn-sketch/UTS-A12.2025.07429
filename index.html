@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KRYO - Toko jaket puffer untuk cuaca dingin dan pendakian">
+  <title>KRYO | Puffer Jacket Built for Cold</title>
+  <!-- Bootstrap 5.3.3 (disimpan lokal agar tetap jalan tanpa internet) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#beranda" class="logo">KRYO</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#beranda" class="nav-link">[ Beranda ]</a></li>
+        <li><a href="#koleksi" class="nav-link">[ Koleksi ]</a></li>
+        <li><a href="#tentang" class="nav-link">[ Tentang ]</a></li>
+        <li><a href="#fitur" class="nav-link">[ Teknologi ]</a></li>
+        <li><a href="#daftar" class="nav-link">[ Daftar ]</a></li>
+        <li><a href="#kontak" class="nav-link">[ Kontak ]</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+          &#128722; <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO: produk unggulan ===== -->
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+
+        <div class="hero-info">
+          <p class="mono">[ Series 01 ] [ 3 Warna ]</p>
+          <h1>Collection<br>Arctic 01&trade;</h1>
+
+          <div class="option-row">
+            <span class="mono">Size</span>
+            <div class="option-list" id="sizeOptions">
+              <button class="option-btn" data-size="S">S</button>
+              <button class="option-btn active" data-size="M">M</button>
+              <button class="option-btn" data-size="L">L</button>
+              <button class="option-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <div class="option-row">
+            <span class="mono">Colour</span>
+            <div class="option-list" id="colorOptions">
+              <button class="option-btn active" data-color="Putih" data-img="assets/images/hero-putih.jpg">Putih</button>
+              <button class="option-btn" data-color="Hitam" data-img="assets/images/hero-hitam.jpg">Hitam</button>
+              <button class="option-btn" data-color="Krem" data-img="assets/images/hero-krem.jpg">Krem</button>
+            </div>
+          </div>
+
+          <div class="buy-row">
+            <button class="circle-btn" id="heroAddBtn" aria-label="Tambah ke keranjang">&#8599;</button>
+            <div>
+              <p class="mono">Add to cart</p>
+              <p class="buy-price">Rp 1.899.000</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-image">
+          <img src="assets/images/hero-putih.jpg" alt="Model memakai jaket Arctic 01" id="heroImg">
+        </figure>
+
+        <aside class="hero-side">
+          <div class="thumbs">
+            <img src="assets/images/thumb-1.jpg" alt="Tampilan depan" class="thumb" data-img="assets/images/glacier-white.jpg">
+            <img src="assets/images/thumb-2.jpg" alt="Tampilan samping" class="thumb" data-img="assets/images/stealth-black.jpg">
+          </div>
+          <p class="mono">01 &mdash;&mdash;&mdash; 03</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ===== NEW COLLECTION (filter + produk) ===== -->
+    <section class="section" id="koleksi">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="title">New Collection</h2>
+          <p class="mono small">[ New Collection ]<br>[ Season 01 ]<br>[ Puffers ]</p>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="semua">Semua</button>
+            <button class="filter-btn" data-filter="terang">Terang</button>
+            <button class="filter-btn" data-filter="gelap">Gelap</button>
+            <button class="filter-btn" data-filter="earth">Earth</button>
+          </div>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="featured-card" data-kategori="gelap">
+            <img src="assets/images/featured.jpg" alt="Koleksi Aurora">
+            <div class="featured-info">
+              <h3>Aurora&trade;</h3>
+              <button class="circle-btn small add-cart" data-nama="Aurora Black Long Puffer" data-harga="2499000" aria-label="Tambah Aurora ke keranjang">&#8599;</button>
+              <p class="mono">Add to cart<br>Rp 2.499.000</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="terang">
+            <figure class="cut"><img src="assets/images/glacier-white.jpg" alt="Glacier White"></figure>
+            <h3>Glacier White</h3>
+            <p class="mono">Oversized puffer jacket</p>
+            <p class="dots"><span class="dot" style="background:#f1f1f1"></span> White</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.299.000</span>
+              <button class="add-btn add-cart" data-nama="Glacier White" data-harga="1299000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="terang">
+            <figure class="cut"><img src="assets/images/polar-cream.jpg" alt="Polar Cream"></figure>
+            <h3>Polar Cream</h3>
+            <p class="mono">Shell puffer jacket</p>
+            <p class="dots"><span class="dot" style="background:#ede4d3"></span> Cream</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.349.000</span>
+              <button class="add-btn add-cart" data-nama="Polar Cream" data-harga="1349000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="gelap">
+            <figure class="cut"><img src="assets/images/stealth-black.jpg" alt="Stealth Black"></figure>
+            <h3>Stealth Black</h3>
+            <p class="mono">High-gloss hooded puffer</p>
+            <p class="dots"><span class="dot" style="background:#111"></span> Black</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.599.000</span>
+              <button class="add-btn add-cart" data-nama="Stealth Black" data-harga="1599000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="terang">
+            <figure class="cut"><img src="assets/images/frost-ivory.jpg" alt="Frost Ivory"></figure>
+            <h3>Frost Ivory</h3>
+            <p class="mono">Insulated puffer jacket</p>
+            <p class="dots"><span class="dot" style="background:#f3efe6"></span> Ivory</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.199.000</span>
+              <button class="add-btn add-cart" data-nama="Frost Ivory" data-harga="1199000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="gelap">
+            <figure class="cut"><img src="assets/images/shadow-gloss.jpg" alt="Shadow Gloss"></figure>
+            <h3>Shadow Gloss</h3>
+            <p class="mono">Reflective puffer jacket</p>
+            <p class="dots"><span class="dot" style="background:#1d1d1d"></span> Black</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.449.000</span>
+              <button class="add-btn add-cart" data-nama="Shadow Gloss" data-harga="1449000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="gelap">
+            <figure class="cut"><img src="assets/images/midnight-navy.jpg" alt="Midnight Navy"></figure>
+            <h3>Midnight Navy</h3>
+            <p class="mono">Heavy cropped puffer</p>
+            <p class="dots"><span class="dot" style="background:#1f2f57"></span> Navy</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.399.000</span>
+              <button class="add-btn add-cart" data-nama="Midnight Navy" data-harga="1399000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="earth">
+            <figure class="cut"><img src="assets/images/summit-taupe.jpg" alt="Summit Taupe"></figure>
+            <h3>Summit Taupe</h3>
+            <p class="mono">Lightweight daily puffer</p>
+            <p class="dots"><span class="dot" style="background:#a39383"></span> Taupe</p>
+            <div class="card-foot">
+              <span class="price">Rp 999.000</span>
+              <button class="add-btn add-cart" data-nama="Summit Taupe" data-harga="999000">+ Keranjang</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-kategori="earth">
+            <figure class="cut"><img src="assets/images/moss-olive.jpg" alt="Moss Olive"></figure>
+            <h3>Moss Olive</h3>
+            <p class="mono">Hooded tech puffer</p>
+            <p class="dots"><span class="dot" style="background:#59604a"></span> Olive</p>
+            <div class="card-foot">
+              <span class="price">Rp 1.249.000</span>
+              <button class="add-btn add-cart" data-nama="Moss Olive" data-harga="1249000">+ Keranjang</button>
+            </div>
+          </article>
+
+        </div>
+        <p class="empty-msg" id="emptyMsg">Produk tidak ditemukan.</p>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG / STATEMENT ===== -->
+    <section class="section statement" id="tentang">
+      <div class="container">
+        <div class="statement-images">
+          <img src="assets/images/statement-1.jpg" alt="Model memakai long puffer hitam" class="side-img">
+          <img src="assets/images/statement-2.jpg" alt="Model memakai puffer putih di hutan bersalju" class="main-img">
+          <img src="assets/images/statement-3.jpg" alt="Pendaki memakai puffer di tebing es" class="side-img">
+        </div>
+
+        <div class="statement-text">
+          <h2 class="title big">Not for<br>many, for the few</h2>
+          <h2 class="title big right">Engineered for cold<br>not for crowd</h2>
+        </div>
+
+        <p class="statement-desc mono">
+          Kami tidak sekadar mengikuti tren. Setiap jaket KRYO dirancang untuk suhu dingin,
+          ketinggian, dan angin kencang. Setiap jahitan dan lapisan isian dihitung untuk
+          menjaga panas tubuh, bukan sekadar untuk tampilan.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FITUR / TEKNOLOGI ===== -->
+    <section class="section feature" id="fitur">
+      <div class="container feature-grid">
+        <h2 class="title big feature-top">When the cold<br>hits, everything<br>else goes <span>quiet</span></h2>
+
+        <figure class="feature-img">
+          <img src="assets/images/jacket-feature.jpg" alt="Jaket puffer putih tergantung">
+        </figure>
+
+        <div class="feature-buy">
+          <p class="mono small">The cold doesn't hurt.<br>It reduces what you feel.</p>
+          <div class="buy-row">
+            <button class="circle-btn add-cart" data-nama="Arctic Shell Jacket" data-harga="1999000" aria-label="Tambah Arctic Shell ke keranjang">&#8599;</button>
+            <div>
+              <p class="mono">Add to cart</p>
+              <p class="buy-price">Rp 1.999.000</p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="feature-list mono">
+          <li>[ Isian bulu angsa 800 fill ]</li>
+          <li>[ Tahan air &amp; angin ]</li>
+          <li>[ Nyaman hingga -30&deg;C ]</li>
+          <li>[ Berat hanya 650 gram ]</li>
+        </ul>
+
+        <h2 class="title big feature-bottom">You don't feel<br><span>cold</span> you feel less</h2>
+      </div>
+    </section>
+
+    <!-- ===== FORM DAFTAR MEMBER (komponen form Bootstrap) ===== -->
+    <section class="section daftar" id="daftar">
+      <div class="container">
+        <div class="row gx-0 gx-lg-5 gy-4 align-items-center">
+
+          <div class="col-lg-5">
+            <p class="mono">[ KRYO Member Club ]</p>
+            <h2 class="title big">Join the<br><span>cold crew</span></h2>
+            <p class="daftar-desc">
+              Daftar jadi member KRYO dan dapatkan diskon 10% untuk pembelian pertama,
+              akses lebih dulu ke koleksi baru, dan undangan event pendakian bersama.
+            </p>
+          </div>
+
+          <div class="col-lg-7">
+            <form class="card form-card shadow" id="memberForm" novalidate>
+              <div class="card-body p-4">
+                <div class="row g-3">
+
+                  <div class="col-12">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Nama lengkap">
+                    <div class="invalid-feedback">Nama wajib diisi.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat lengkap"></textarea>
+                    <div class="invalid-feedback">Alamat wajib diisi.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="kota" class="form-label">Kota</label>
+                    <select class="form-select" id="kota">
+                      <option value="" selected disabled>Pilih kota...</option>
+                      <option value="Semarang">Semarang</option>
+                      <option value="Kudus">Kudus</option>
+                      <option value="Demak">Demak</option>
+                      <option value="Pekalongan">Pekalongan</option>
+                      <option value="Tegal">Tegal</option>
+                      <option value="Surabaya">Surabaya</option>
+                      <option value="Jakarta">Jakarta</option>
+                    </select>
+                    <div class="invalid-feedback">Silakan pilih kota.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="form-label mb-2">Hobi</p>
+                    <div class="form-check">
+                      <input class="form-check-input hobi" type="checkbox" value="Membaca" id="hobiMembaca">
+                      <label class="form-check-label" for="hobiMembaca">Membaca</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input hobi" type="checkbox" value="Koding" id="hobiKoding">
+                      <label class="form-check-label" for="hobiKoding">Koding</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input hobi" type="checkbox" value="Berenang" id="hobiBerenang">
+                      <label class="form-check-label" for="hobiBerenang">Berenang</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input hobi" type="checkbox" value="Menggambar" id="hobiMenggambar">
+                      <label class="form-check-label" for="hobiMenggambar">Menggambar</label>
+                    </div>
+                    <small class="text-danger d-none" id="errHobi">Pilih minimal satu hobi.</small>
+                  </div>
+
+                  <div class="col-12 d-flex gap-2">
+                    <button type="submit" class="btn btn-dark px-4">Daftar Sekarang</button>
+                    <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                  </div>
+
+                </div>
+
+                <!-- hasil pendaftaran ditampilkan JavaScript di sini -->
+                <div class="alert alert-success mt-4 mb-0 d-none" id="hasilDaftar"></div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNER GUNUNG ===== -->
+    <section class="banner">
+      <div class="container banner-content">
+        <p class="mono small">KRYO lahir di pegunungan,<br>bukan sebagai tren,<br>tapi sebagai jawaban.</p>
+        <h2 class="title big">Built for cold<br>made for height<br>forged to last</h2>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER & KONTAK ===== -->
+  <footer class="footer" id="kontak">
+    <div class="container footer-grid">
+      <div>
+        <p class="barcode">|||| || ||| | |||| ||</p>
+        <address class="mono small">
+          KRYO Store &mdash; Jl. Pemuda No. 150, Semarang<br>
+          WA: 0812-3456-7890<br>
+          Email: halo@kryo.id
+        </address>
+      </div>
+
+      <form class="newsletter" id="newsletterForm" novalidate>
+        <label for="emailNews" class="mono small">Dapatkan info drop terbaru lebih dulu</label>
+        <div class="news-input">
+          <input type="email" id="emailNews" placeholder="Email kamu">
+          <button type="submit" aria-label="Kirim">&rarr;</button>
+        </div>
+        <small class="form-msg" id="newsMsg"></small>
+      </form>
+
+      <ul class="footer-links mono small">
+        <li><a href="#koleksi">[ Koleksi ]</a></li>
+        <li><a href="#tentang">[ Tentang ]</a></li>
+        <li><a href="#fitur">[ Teknologi ]</a></li>
+        <li><a href="#beranda">[ Kembali ke atas ]</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-big">KRYO PUFFERS</p>
+
+    <!-- Identitas mahasiswa -->
+    <div class="identity">
+      <p><span class="mono small">Nama</span> Daiva Fauzani Aqil Susilo</p>
+      <p><span class="mono small">NIM</span> A12.2025.07429</p>
+    </div>
+    <p class="copyright mono small">&copy; 2026 KRYO &mdash; UTS Pemrograman Web Dasar. Foto: Unsplash.</p>
+  </footer>
+
+  <!-- ===== KERANJANG (drawer) ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Keranjang belanja">
+    <div class="cart-head">
+      <h3>Keranjang</h3>
+      <button class="cart-close" id="cartClose" aria-label="Tutup keranjang">&times;</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-foot">
+      <p class="cart-total">Total: <strong id="cartTotal">Rp 0</strong></p>
+      <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Notifikasi kecil -->
+  <div class="notif" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
